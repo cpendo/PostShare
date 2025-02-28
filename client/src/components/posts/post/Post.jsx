@@ -27,7 +27,7 @@ const Post = ({ post, setCurrentId }) => {
         <Card.Title className="mb-0 heading text-capitalize">{post.title}</Card.Title>
         <Card.Text>
           <small className="d-block text-muted mb-2">
-            Created by: {post.name} Time: {moment(post.createdAt).fromNow()}
+            Created by: {post.creator.name} Time: {moment(post.createdAt).fromNow()}
           </small>
           {post.message}
           <small className="d-block text-muted mt-2">

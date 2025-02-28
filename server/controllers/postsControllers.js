@@ -11,7 +11,7 @@ const getPosts = async (req, res) => {
     const posts = await Post.find()
       .sort({ _id: -1 })
       .limit(LIMIT)
-      .skip(startIndex);
+      .skip(startIndex).populate("creator", "name");
 
     res.status(200).json({
       data: posts,
